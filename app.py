@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder='assets')
 
 @app.route('/')
 def index():
-    return render_template('index-triangle.html')
+    return render_template('index-smoky.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
