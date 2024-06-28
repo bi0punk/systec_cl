@@ -1,0 +1,17 @@
+my_flask_app/
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── models.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   ├── static/
+│   │   ├── css/
+│   │   │   ├── styles.css
+│   │   ├── js/
+│   │   │   ├── scripts.js
+├── venv/
+├── config.py
+├── requirements.txt
+├── run.py
