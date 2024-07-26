@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Glint</title>
+    <title>Atacama Tech</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
 
 <body id="top">
     <header class="s-header">
-        <div class="header-logo"> <a class="site-logo" href="index.html"> <img src="images/logo.png" alt="Homepage">
+        <div class="header-logo"> <a class="site-logo" href="index.html"> <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Homepage">
             </a></div>
         <nav class="header-nav"><a href="index.html#0" class="header-nav__close" title="close"><span>Close</span></a>
             <div class="header-nav__content">
@@ -46,7 +46,7 @@
         </nav><a class="header-menu-toggle" href="index.html#0"> <span class="header-menu-text">Menu</span> <span
                 class="header-menu-icon"></span> </a>
     </header>
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg"
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/1.jpg') }}"
         data-natural-width="3000" data-natural-height="2000" data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -83,7 +83,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"> <i class="icon-paint-brush"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Brand Identity</h3>
+                    <h3 class="h2">Transformación Digital</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
                         voluptas ipsa in tempora esse soluta sint.</p>
@@ -92,7 +92,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"> <i class="icon-group"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Illustration</h3>
+                    <h3 class="h2">Cloud Computing</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
                         voluptas ipsa in tempora esse soluta sint.</p>
@@ -101,7 +101,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"> <i class="icon-megaphone"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Marketing</h3>
+                    <h3 class="h2">Ciberseguridad</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
                         voluptas ipsa in tempora esse soluta sint.</p>
@@ -110,7 +110,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"> <i class="icon-earth"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Web Design</h3>
+                    <h3 class="h2">IoT</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
                         voluptas ipsa in tempora esse soluta sint.</p>
@@ -128,7 +128,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"><i class="icon-lego-block"></i></div>
                 <div class="service-text">
-                    <h3 class="h2">Web Development</h3>
+                    <h3 class="h2">System & App Development</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
                         voluptas ipsa in tempora esse soluta sint.</p>
