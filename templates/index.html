@@ -20,15 +20,15 @@
 
 <body id="top">
     <header class="s-header">
-       <!--  <div class="header-logo"> <a class="site-logo" href="index.html"> <img src="{{ url_for('static', filename='images/log.png') }}" alt="Homepage"> -->
-            </a></div>
+        <!--  <div class="header-logo"> <a class="site-logo" href="index.html"> <img src="{{ url_for('static', filename='images/log.png') }}" alt="Homepage"> -->
+        </a></div>
         <nav class="header-nav"><a href="index.html#0" class="header-nav__close" title="close"><span>Close</span></a>
             <div class="header-nav__content">
                 <h3>Navigation</h3>
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll" href="index.html#home" title="home">Home</a></li>
                     <li><a class="smoothscroll" href="index.html#about" title="about">About</a></li>
-                    <li><a class="smoothscroll" href="index.html#services" title="services">Services</a></li>             
+                    <li><a class="smoothscroll" href="index.html#services" title="services">Services</a></li>
                     <li><a class="smoothscroll" href="index.html#contact" title="contact">Contact</a></li>
                 </ul>
                 <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href="index.html#0">voluptatem</a> porro
@@ -41,16 +41,20 @@
         </nav><a class="header-menu-toggle" href="index.html#0"> <span class="header-menu-text">Menu</span> <span
                 class="header-menu-icon"></span> </a>
     </header>
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/1.jpg') }}"
-        data-natural-width="3000" data-natural-height="2000" data-position-y="center">
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{{ url_for('static', filename='videos/1.mp4') }}" data-natural-width="3000"
+        data-natural-height="2000" data-position-y="center">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='videos/2.mp4') }}" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="home-content">
             <div class="row home-content__main">
                 <h3>Welcome to</h3>
                 <img src="{{ url_for('static', filename='images/logo(1).png') }}" alt="Homepage">
-            <!--  <h1> Somos un grupo de personas  <br> que impulsa el desarrollo tecnológico en la región  <br>utilizando las mejores prácticas y herramientas innovadoras <br> digital
-                    experiences.</h1> -->
                 <div class="home-content__buttons"> <a href="index.html#contact" class="smoothscroll btn btn--stroke">
                         Start a Project </a> <a href="index.html#about" class="smoothscroll btn btn--stroke"> More About
                         Us </a></div>
@@ -61,18 +65,17 @@
         </div>
         <ul class="home-social">
             <li> <a href="index.html#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
-<!--             <li> <a href="index.html#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a></li> -->
             <li> <a href="index.html#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
-<!--             <li> <a href="index.html#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a></li>
-            <li> <a href="index.html#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a></li> -->
+
         </ul>
     </section>
     <section id="services" class="s-services">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">What We Do</h3>
-                <h1 class="display-2">¿Qué hacemos? Tenemos todo lo que necesitas para lanzar y hacer crecer tu negocio</h1>
+                <h1 class="display-2">¿Qué hacemos? Tenemos todo lo que necesitas para lanzar y hacer crecer tu negocio
+                </h1>
             </div>
         </div>
         <div class="row services-list block-1-2 block-tab-full">
@@ -81,14 +84,15 @@
                 <div class="service-text">
                     <h3 class="h2">Transformación Digital</h3>
                     <p>Ayudamos a empresas a integrar tecnología digital en todas sus áreas,
-                        digitalizando procesos y adoptando nuevas herramientas para mejorar eficiencia y competitividad.</p>
+                        digitalizando procesos y adoptando nuevas herramientas para mejorar eficiencia y competitividad.
+                    </p>
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon"> <i class="icon-home"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Cloud Computing</h3>
-                    <p>Ofrecemos soluciones en la nube para almacenamiento, procesamiento y gestión de datos, 
+                    <p>Ofrecemos soluciones en la nube para almacenamiento, procesamiento y gestión de datos,
                         reduciendo costos operativos y mejorando la agilidad.</p>
                 </div>
             </div>
@@ -96,7 +100,7 @@
                 <div class="service-icon"> <i class="icon-megaphone"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Ciberseguridad</h3>
-                    <p>Proveemos servicios para proteger sistemas, redes y datos contra ataques, garantizando 
+                    <p>Proveemos servicios para proteger sistemas, redes y datos contra ataques, garantizando
                         la integridad, confidencialidad y disponibilidad de la información.</p>
                 </div>
             </div>
@@ -104,7 +108,7 @@
                 <div class="service-icon"> <i class="icon-earth"></i></div>
                 <div class="service-text">
                     <h3 class="h2">IoT</h3>
-                    <p>Implementamos soluciones de IoT para conectar dispositivos y compartir datos en tiempo real, 
+                    <p>Implementamos soluciones de IoT para conectar dispositivos y compartir datos en tiempo real,
                         mejorando la automatización y la eficiencia operativa.</p>
                 </div>
             </div>
@@ -112,7 +116,8 @@
                 <div class="service-icon"> <i class="icon-cube"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Automatización</h3>
-                    <p>Desarrollamos sistemas y robots para optimizar procesos y reducir la intervención humana en tareas repetitivas, 
+                    <p>Desarrollamos sistemas y robots para optimizar procesos y reducir la intervención humana en
+                        tareas repetitivas,
                         mejorando la eficiencia y minimizando errores..</p>
                 </div>
             </div>
@@ -120,7 +125,8 @@
                 <div class="service-icon"><i class="icon-lock"></i></div>
                 <div class="service-text">
                     <h3 class="h2">System & App Development</h3>
-                    <p>Creamos software a medida, desde aplicaciones móviles hasta sistemas de gestión empresarial, alineado con los objetivos y requerimientos de su negocio.</p>
+                    <p>Creamos software a medida, desde aplicaciones móviles hasta sistemas de gestión empresarial,
+                        alineado con los objetivos y requerimientos de su negocio.</p>
                 </div>
             </div>
         </div>
@@ -177,7 +183,8 @@
                         <p> <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
                                 data-cfemail="c5a6aaabb1a4a6b185a2a9acabb1b6acb1a0eba6aaa8">[email&#160;protected]</a><br>
                             <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                                data-cfemail="640d0a020b2403080d0a10170d10014a070b09">[email&#160;protected]</a></p>
+                                data-cfemail="640d0a020b2403080d0a10170d10014a070b09">[email&#160;protected]</a>
+                        </p>
                     </div>
                     <div class="cinfo">
                         <h5>Call Us At</h5>
@@ -265,7 +272,8 @@
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/cloudflare-static/5c5dd728/email-decode.min.js"></script>
+    <script data-cfasync="false"
+        src="https://cdnjs.cloudflare.com/ajax/libs/cloudflare-static/5c5dd728/email-decode.min.js"></script>
     <script src="{{ url_for('static', filename='js/jquery-3.6.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -99,7 +99,15 @@ a:hover, a:active {
     outline: 0;
 }
 
-
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la sección sin distorsionarse */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
 
 /* ===================================================================
  * # typography & general theme styles
