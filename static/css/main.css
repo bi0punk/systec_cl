@@ -1752,8 +1752,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a::before {
-    border-bottom: 2px solid #39b54a;
-    border-right: 2px solid #39b54a;
+    border-bottom: 2px solid #e57c1a;
+    border-right: 2px solid #c14817;
     content: '';
     display: block;
     height: 8px;
@@ -2089,7 +2089,7 @@ html.cl-loaded .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #39b54a;
+    background-color: #d4571c;
     color: #010507;
     position: relative;
 }
@@ -3259,7 +3259,7 @@ footer .row {
     border: none;
     width: 85px;
     height: 28px;
-    background: url("../images/logo.png") no-repeat center;
+    background: url("../images/log.png") no-repeat center;
     background-size: 85px 28px;
     font: 0/0 a;
     text-shadow: none;
