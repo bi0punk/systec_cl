@@ -1346,7 +1346,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     outline: 0;
     border: none;
-    width: 250px;
+    width: 150px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1673,6 +1673,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding-bottom: 15.6rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+    text-align: center;     /* Asegura que el texto esté centrado */
 }
 
 .home-content h3 {
@@ -1684,7 +1688,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
     margin-top: 0;
     margin-bottom: 1.2rem;
-    margin-left: 6px;
 }
 
 .home-content h1 {
@@ -1700,15 +1703,20 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
 }
 
-.home-content__buttons {
+/* .home-content__buttons {
     padding-top: 6rem;
     text-align: left;
+} */
+.home-content__buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;    /* Opcional: centra verticalmente si es necesario */
+    gap: 1rem; /* Añade espacio entre los botones, ajusta según sea necesario */
 }
-
 .home-content__buttons .btn {
     width: 215px;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
+    border-color: #e9aa2e;
+    color: #dd771d;
     margin: 1.5rem 1.5rem 0 0;
     letter-spacing: .25rem;
     -webkit-transition: all 0.5s ease-in-out;
