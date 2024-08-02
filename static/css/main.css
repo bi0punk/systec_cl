@@ -71,8 +71,8 @@ html, body {
 
 body {
     background: #111111;
-    font-family: "lora-regular", serif;
-    font-size: 1.7rem;
+    font-family: 'Nunito', sans-serif; /* Actualizado a Nunito */
+    font-size: 2.7rem;
     font-style: normal;
     font-weight: normal;
     line-height: 1.765;
@@ -80,7 +80,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -2265,7 +2264,7 @@ html.cl-loaded .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
     background-color: #000000;
-    color: #757575;
+    color: #e9aa76;
     position: relative;
 }
 

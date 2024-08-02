@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+
+    <style>
+        .display-2 {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .display-2 span {
+            position: absolute;
+            width: 100%;
+            transition: opacity 1s ease-in-out;
+        }
+        .display-2 .fade-in {
+            opacity: 1;
+        }
+        .display-2 .fade-out {
+            opacity: 0;
+        }
+    </style>
     <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
     <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
@@ -70,17 +92,19 @@
 
         </ul>
     </section>
+
     <section id="services" class="s-services">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">What We Do</h3>
-                <h1 class="display-2">¿Qué hacemos? Tenemos todo lo que necesitas para lanzar y hacer crecer tu negocio
+                <h1 class="display-2" id="main-title">What do we do? We have everything you need to launch and grow your business and industry</h1>
                 </h1>
+                
             </div>
         </div>
         <div class="row services-list block-1-2 block-tab-full">
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"> <i class="icon-paint-brush"></i></div>
+                <div class="service-icon"> <i class="fas fa-laptop-code"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Transformación Digital</h3>
                     <p>Ayudamos a empresas a integrar tecnología digital en todas sus áreas,
@@ -89,7 +113,7 @@
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"> <i class="icon-home"></i></div>
+                <div class="service-icon"> <i class="fas fa-cloud"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Cloud Computing</h3>
                     <p>Ofrecemos soluciones en la nube para almacenamiento, procesamiento y gestión de datos,
@@ -97,7 +121,7 @@
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"> <i class="icon-megaphone"></i></div>
+                <div class="service-icon"> <i class="fas fa-shield-alt"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Ciberseguridad</h3>
                     <p>Proveemos servicios para proteger sistemas, redes y datos contra ataques, garantizando
@@ -105,7 +129,7 @@
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"> <i class="icon-earth"></i></div>
+                <div class="service-icon"> <i class="fas fa-network-wired"></i></div>
                 <div class="service-text">
                     <h3 class="h2">IoT</h3>
                     <p>Implementamos soluciones de IoT para conectar dispositivos y compartir datos en tiempo real,
@@ -113,16 +137,16 @@
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"> <i class="icon-cube"></i></div>
+                <div class="service-icon"> <i class="fas fa-robot"></i></div>
                 <div class="service-text">
                     <h3 class="h2">Automatización</h3>
                     <p>Desarrollamos sistemas y robots para optimizar procesos y reducir la intervención humana en
                         tareas repetitivas,
-                        mejorando la eficiencia y minimizando errores..</p>
+                        mejorando la eficiencia y minimizando errores.</p>
                 </div>
             </div>
             <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon"><i class="icon-lock"></i></div>
+                <div class="service-icon"><i class="fas fa-code"></i></div>
                 <div class="service-text">
                     <h3 class="h2">System & App Development</h3>
                     <p>Creamos software a medida, desde aplicaciones móviles hasta sistemas de gestión empresarial,
@@ -277,6 +301,45 @@
     <script src="{{ url_for('static', filename='js/jquery-3.6.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        // Define the texts in Spanish and English
+        const texts = [
+            "¿Qué hacemos? Tenemos todo lo que necesitas para lanzar y hacer crecer tu negocio",
+            "What We Do? We have everything you need to launch and grow your business"
+        ];
+    
+        // Get the title element and spans
+        const titleElement = document.querySelector('.display-2');
+        const spans = titleElement.querySelectorAll('span');
+    
+        // Initialize the current index
+        let currentIndex = 0;
+    
+        function toggleLanguage() {
+            // Hide current text with fade-out
+            spans[currentIndex].classList.remove('fade-in');
+            spans[currentIndex].classList.add('fade-out');
+    
+            // Update the text content
+            currentIndex = (currentIndex + 1) % texts.length;
+            spans[currentIndex].textContent = texts[currentIndex];
+    
+            // Show new text with fade-in
+            spans[currentIndex].classList.remove('fade-out');
+            spans[currentIndex].classList.add('fade-in');
+        }
+    
+        // Initialize the spans
+        spans[0].textContent = texts[0];
+        spans[1].textContent = texts[1];
+        spans[1].classList.add('fade-out'); // Start with English text hidden
+    
+        // Change language every 5 seconds (5000 milliseconds)
+        setInterval(toggleLanguage, 5000);
+    </script>
+
+
+
 </body>
 
 </html>
